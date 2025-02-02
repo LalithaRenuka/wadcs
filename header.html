@@ -1,52 +1,31 @@
-<div class="header">
-    <nav>
-        <div class="logo">
-            <a href="index.html">RideWise</a>
+<html>
+<head>
+    <link rel="stylesheet" href="vehicle.css">
+</head>
+<body>
+    <header>
+        <div class="logo-title">
+            <img src="R.png" alt="RideWise Logo">
+            <h1>RideWise</h1>
         </div>
-        <ul class="nav-links">
-            <li><a href="comparison.html">Ride Cost Comparison</a></li>
-            <li><a href="activities.html">Activities</a></li>
-            <li><a href="signup.html">Sign Up</a></li>
-            <li><a href="signin.html">Sign In</a></li>
-        </ul>
-    </nav>
-</div>
-<hr>
+        <nav> 
+            <a href="index.html">Home</a>
+            <a href="vehicle_cost.html">Ride Cost Comparison</a>
+            <a href="activities.html">Activities</a>
+            <a href="sign_up.html">Sign Up</a>
+            <a href="sign_in.html">Sign In</a>
+        </nav>
+    </header>
+</body>
+</html>
 
-<style>
-/* Header Styling */
-.header {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-}
-
-.header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo a {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    text-decoration: none;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    padding: 0;
-}
-
-.nav-links li {
-    display: inline;
-}
-
-.nav-links li a {
-    color: white;
+<script>
+    fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+    });
+</script>
     text-decoration: none;
     font-size: 18px;
 }
