@@ -4,18 +4,16 @@
     <link rel="stylesheet" href="vehicle.css">
 </head>
 <body>
-    <header>
-        <div class="logo-title">
-            <img src="R.png" alt="RideWise Logo">
-            <h1>RideWise</h1>
-        </div>
-        <nav> 
-            <a href="vehicle_cost.html">Ride Cost Comparison</a>
-            <a href="activities.html">Activities</a>
-            <a href="sign_up.html">Sign Up</a>
-            <a href="sign_in.html">Sign In</a>
-        </nav>
-    </header>
+    <div id="header-placeholder"></div>
+
+    <script>
+        // Load the header from header.html into the current page
+        fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        });
+    </script>
     <main>
         <h2>Welcome to RideWise</h2>
         <p>Compare ride costs from different services and choose the most affordable one.</p>
@@ -25,14 +23,6 @@
             <img src="R (1).png" alt="Scan to Download RideWise App">
             <p><a href="https://www.ridewise.com/" target="_blank">Download the RideWise App</a></p>
         </section>
-        <script>
-        // Load the header from header.html into the current page
-        fetch('header.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('header-placeholder').innerHTML = data;
-        });
-    </script>
     </main>
     <footer>
         <p>&copy; 2024 RideWise - All Rights Reserved</p>
