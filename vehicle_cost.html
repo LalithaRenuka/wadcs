@@ -102,6 +102,17 @@
 
     <script>
         const geocodeAPIKey = "ffbb5765551145b7be51bc9387ff9ee6"; 
+        <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading header:', error));
+    });
+</script>
+
 
         // Reverse Geocode Function
         async function reverseGeocode(lat, lng) {
