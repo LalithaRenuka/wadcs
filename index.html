@@ -25,6 +25,14 @@
             <img src="R (1).png" alt="Scan to Download RideWise App">
             <p><a href="https://www.ridewise.com/" target="_blank">Download the RideWise App</a></p>
         </section>
+        <script>
+        // Load the header from header.html into the current page
+        fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        });
+    </script>
     </main>
     <footer>
         <p>&copy; 2024 RideWise - All Rights Reserved</p>
