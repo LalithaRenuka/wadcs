@@ -104,7 +104,6 @@
 
     <script>
         const geocodeAPIKey = "ffbb5765551145b7be51bc9387ff9ee6"; 
-        <script>
     document.addEventListener("DOMContentLoaded", function() {
         fetch('header.html')
         .then(response => response.text())
@@ -113,10 +112,7 @@
         })
         .catch(error => console.error('Error loading header:', error));
     });
-</script>
-
-
-        // Reverse Geocode Function
+// Reverse Geocode Function
         async function reverseGeocode(lat, lng) {
             const response = await fetch(
                 `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${lng}&key=${geocodeAPIKey}`
