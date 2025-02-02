@@ -23,6 +23,17 @@
             <input type="text" id="captcha-input" name="captcha-input" placeholder="Enter CAPTCHA" required>
             <button type="submit" onclick="return validateCaptcha()">Sign up</button>
         </form>
+        <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading header:', error));
+    });
+</script>
+
     </main>
     <footer>
         <p>&copy; 2024 Ride Cost Comparison</p>
