@@ -6,6 +6,15 @@
     <script src="captcha.js" defer></script>
 </head>
 <body>
+     <div id="header-placeholder"></div>
+
+    <script>
+        fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        });
+    </script>
     <main>
         <h2>Sign In</h2>
         <form action="#" method="POST">
